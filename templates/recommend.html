@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>Recommendations</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  {% if product %}
+  <h2>Selected Product: {{ product['name'] }}</h2>
+  <p>Category: {{ product['category'] }}</p>
+  <p>Tags: {{ product['tags'] }}</p>
+  <h3>Recommended Products:</h3>
+  <ul>
+    {% for r in recommendations %}
+      <li><strong>{{ r['name'] }}</strong> - {{ r['category'] }} (₹{{ r['price'] }})</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No product found.</p>
+  {% endif %}
+  <a href="/">Back</a>
+</body>
+</html>

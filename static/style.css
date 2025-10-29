@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  margin: 40px;
+  text-align: center;
+}
+h1 { color: #0a7c7c; }
+form, ul { margin-top: 20px; }
+button {
+  background-color: #0a7c7c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
